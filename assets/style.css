@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    writing-mode: vertical-rl;
+}
+
+#container {
+    font-family: 'Noto Serif CJK TC';
+    word-break: break-all;
+    height: 100%;
+    min-width: 100%;
+    padding: 1em 2em;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+}
+
+p {
+    padding: 0;
+    margin-right: 0.8em;
+    margin-left: 0;
+    text-indent: 2em;
+    hanging-punctuation: allow-end;
+}
+
+p:first-child {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    text-indent: 0;
+}
+
+a {
+    text-decoration: none;
+}
