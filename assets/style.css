@@ -20,10 +20,18 @@ html {
     height: 100%;
     min-width: 100%;
     padding: 1em 2em;
-    font-size: 24px;
+    margin-left: 4em;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.06em;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-indent: 0;
 }
 
 p {
@@ -31,16 +39,33 @@ p {
     margin-right: 0.8em;
     margin-left: 0;
     text-indent: 2em;
-    hanging-punctuation: allow-end;
-}
-
-p:first-child {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    text-indent: 0;
 }
 
 a {
     text-decoration: none;
+}
+
+#navigator {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 1.5em 0.75em;
+    background: rgba(255, 255, 255, .9);
+    border-right: #aaa dashed 1px;
+    font-size: 1.2em;
+}
+
+#link-prev {
+    float: left;
+}
+
+#link-next {
+    float: right;
+}
+
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 12px;
+    }
 }
