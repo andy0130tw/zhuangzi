@@ -26,7 +26,7 @@
 ◊when/splice[prev-page]{
 <span id="link-prev">前篇：<a href="◊|prev-page-path|">◊|prev-page-title|</a></span>
 }
-<span id="link-home"><a href="/index.html">目錄</a></span>
+<span id="link-home"><a href="◊build-path[@prefix]">目錄</a></span>
 ◊when/splice[next-page]{
 <span id="link-next">次篇：<a href="◊|next-page-path|">◊|next-page-title|</a></span>
 }

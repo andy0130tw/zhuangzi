@@ -28,6 +28,6 @@
 
 ; used for specifying absolute path of assets
 (define @prefix (if (equal? (getenv "POLLEN") "gh-pages")
-                 "/zhuangzi"
+                 "/zhuangzi/"
                  "/"))
 (provide @prefix)
