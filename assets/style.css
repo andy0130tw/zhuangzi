@@ -25,6 +25,26 @@ html {
     font-weight: 500;
     line-height: 1.6;
     letter-spacing: 0.06em;
+
+}
+
+.with-paragraph-num {
+    counter-reset: paragraph-num;
+}
+
+.with-paragraph-num p:before {
+    counter-increment: paragraph-num;
+    content: counter(paragraph-num);
+    position: absolute;
+    top: 0;
+    right: .6rem;
+    line-height: 1;
+    writing-mode: horizontal-tb;
+    font-size: .9rem;
+    font-family: sans-serif;
+    font-weight: normal;
+    letter-spacing: -.1em;
+    color: #777;
 }
 
 h1 {
@@ -35,6 +55,7 @@ h1 {
 }
 
 p {
+    position: relative;
     padding: 0;
     margin-right: 0.8em;
     margin-left: 0;
@@ -54,14 +75,17 @@ a {
     background: rgba(255, 255, 255, .9);
     border-right: #aaa dashed 1px;
     font-size: 1.2em;
+    text-align: center;
 }
 
 #link-prev {
-    float: left;
+    position: absolute;
+    top: 1.5em;
 }
 
 #link-next {
-    float: right;
+    position: absolute;
+    bottom: 1.5em;
 }
 
 @media screen and (max-width: 360px) {
