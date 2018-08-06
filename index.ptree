@@ -1,0 +1,5 @@
+#lang pollen
+◊(require racket/list)
+
+◊`(@ ,@(map (λ (n) (format "articles/~a.html" n))
+            (range 1 34)))
