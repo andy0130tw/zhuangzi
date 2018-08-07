@@ -15,7 +15,7 @@ html {
 }
 
 #container {
-    font-family: 'Noto Serif CJK TC';
+    font-family: 'Noto Serif CJK TC', 'Source Han Serif TC', serif;
     word-break: break-all;
     height: 100%;
     min-width: 100%;
@@ -24,8 +24,50 @@ html {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.6;
-    letter-spacing: 0.06em;
+    --letter-spacing: 0.06em;
+    letter-spacing: var(--letter-spacing);
+}
 
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    text-indent: 0;
+}
+
+p {
+    position: relative;
+    padding: 0;
+    margin-right: 0.8em;
+    margin-left: 0;
+    text-indent: calc(2 * (1em + var(--letter-spacing)));
+}
+
+a {
+    text-decoration: none;
+}
+
+#navigator {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .9);
+    border-right: #aaa dashed 1px;
+    font-size: 1.2em;
+    text-align: center;
+    --padding-horizontal: 1.5em;
+    padding: var(--padding-horizontal) 0.75em;
+}
+
+#link-prev {
+    position: absolute;
+    top: var(--padding-horizontal);
+}
+
+#link-next {
+    position: absolute;
+    bottom: var(--padding-horizontal);
 }
 
 .with-paragraph-num {
@@ -45,47 +87,6 @@ html {
     font-weight: normal;
     letter-spacing: -.1em;
     color: #777;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    text-indent: 0;
-}
-
-p {
-    position: relative;
-    padding: 0;
-    margin-right: 0.8em;
-    margin-left: 0;
-    text-indent: 2em;
-}
-
-a {
-    text-decoration: none;
-}
-
-#navigator {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    padding: 1.5em 0.75em;
-    background: rgba(255, 255, 255, .9);
-    border-right: #aaa dashed 1px;
-    font-size: 1.2em;
-    text-align: center;
-}
-
-#link-prev {
-    position: absolute;
-    top: 1.5em;
-}
-
-#link-next {
-    position: absolute;
-    bottom: 1.5em;
 }
 
 @media screen and (max-width: 360px) {
